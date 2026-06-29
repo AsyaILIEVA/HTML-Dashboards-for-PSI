@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geology Dashboard</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Segoe UI,Arial,sans-serif;
+    background:#eef2f7;
+}
+
+header{
+    background:#14365d;
+    color:white;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    height:calc(100vh - 70px);
+}
+
+.sidebar{
+    background:white;
+    border-right:1px solid #ddd;
+    overflow:auto;
+}
+
+.sidebar h3{
+    padding:20px;
+    margin:0;
+    background:#f5f5f5;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.sidebar li{
+    padding:15px 20px;
+    border-bottom:1px solid #eee;
+    cursor:pointer;
+}
+
+.sidebar li:hover{
+    background:#e8f0ff;
+}
+
+.content{
+    padding:20px;
+    overflow:auto;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+    padding:20px;
+}
+
+.card h2{
+    margin-top:0;
+    color:#14365d;
+}
+
+.map{
+    height:320px;
+    background:#dbe8f7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    color:#555;
+}
+
+.logs{
+    height:320px;
+    background:#fafafa;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:2px dashed #bbb;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table td{
+    padding:10px;
+    border-bottom:1px solid #eee;
+}
+
+.progress{
+    height:12px;
+    background:#ddd;
+    border-radius:20px;
+}
+
+.progress div{
+    height:100%;
+    background:#2e8b57;
+    border-radius:20px;
+}
+
+.description{
+    line-height:1.8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Petroleum Information System | Geology</h2>
+
+<div>
+Field: Alpha Field |
+Well: A-12
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="sidebar">
+
+<h3>Geology Menu</h3>
+
+<ul>
+
+<li>Field Map</li>
+
+<li>Well Locations</li>
+
+<li>Formation Tops</li>
+
+<li>Lithology</li>
+
+<li>Stratigraphy</li>
+
+<li>Cross Sections</li>
+
+<li>Core Data</li>
+
+<li>Structural Maps</li>
+
+<li>Reservoir Zones</li>
+
+<li>Prospects</li>
+
+<li>Fault Interpretation</li>
+
+<li>3D Geological Model</li>
+
+</ul>
+
+</div>
+
+<div class="content">
+
+<div class="grid">
+
+<div class="card">
+
+<h2>Field Map</h2>
+
+<div class="map">
+
+Interactive GIS Map
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Well Logs</h2>
+
+<div class="logs">
+
+Gamma Ray | Resistivity | Density | Neutron
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Reservoir Parameters</h2>
+
+<table>
+
+<tr><td>Formation</td><td>Upper Sandstone</td></tr>
+
+<tr><td>Depth</td><td>2450 m</td></tr>
+
+<tr><td>Net Pay</td><td>82 m</td></tr>
+
+<tr><td>Gross Thickness</td><td>133 m</td></tr>
+
+<tr><td>Porosity</td><td>23 %</td></tr>
+
+<tr><td>Permeability</td><td>420 mD</td></tr>
+
+<tr><td>Water Saturation</td><td>28 %</td></tr>
+
+<tr><td>Hydrocarbon Saturation</td><td>72 %</td></tr>
+
+<tr><td>Reservoir Pressure</td><td>3275 psi</td></tr>
+
+<tr><td>Temperature</td><td>89 °C</td></tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Lithology</h2>
+
+<p>Sandstone</p>
+
+<div class="progress">
+
+<div style="width:70%"></div>
+
+</div>
+
+<br>
+
+<p>Shale</p>
+
+<div class="progress">
+
+<div style="width:18%;background:#888;"></div>
+
+</div>
+
+<br>
+
+<p>Limestone</p>
+
+<div class="progress">
+
+<div style="width:12%;background:#4a90e2;"></div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Geological Description</h2>
+
+<div class="description">
+
+<b>Reservoir:</b> Upper Sandstone Member<br><br>
+
+Fine- to medium-grained sandstone with thin shale
+interbeds deposited in a deltaic environment.
+Reservoir quality is excellent due to high porosity
+and permeability. Structural closure is controlled
+by two major normal faults with a regional shale seal.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Geological Assessment</h2>
+
+<table>
+
+<tr><td>Trap Type</td><td>Faulted Anticline</td></tr>
+
+<tr><td>Seal</td><td>Marine Shale</td></tr>
+
+<tr><td>Source Rock</td><td>Organic Shale</td></tr>
+
+<tr><td>Migration</td><td>Fault Assisted</td></tr>
+
+<tr><td>Reservoir Quality</td><td>Excellent</td></tr>
+
+<tr><td>Exploration Risk</td><td>Low</td></tr>
+
+<tr><td>Chance of Success</td><td>82%</td></tr>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
